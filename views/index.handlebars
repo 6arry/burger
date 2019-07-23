@@ -3,9 +3,10 @@
         <div class="col-12 text-center">
             <h1>EAT DA BURGER!</h1>
         </div>
-        <div class="col-6">
+        <div class="col-6 text-center">
             <div class="row">
                 {{#each burger_data}}
+                    {{#unless this.devoured}}
                 <div class="col-9 text-center">
                     <pre>{{this.id}}. {{this.burger_name}}</pre>
                 </div>
@@ -22,6 +23,7 @@
             </div>
             {{/unless}}
             {{/each}}
+            </div>
         </div>
 
         <div class="col-6 text-center">
