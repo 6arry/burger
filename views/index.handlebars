@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col-3 text-center">
-                <form method="POST"action="/burger/update?_method=PUT" class="button-size">
+                <form method="POST" action="/burger/update?_method=PUT" class="button-size">
                     <input type="hidden" name="burger_id" type="text"
                     value={{this.id}}>
                     <br>
@@ -21,6 +21,15 @@
                 </form>
             </div>
             {{/unless}}
+            {{/each}}
+        </div>
+
+        <div class="col-6 text-center">
+            {{#each burger_data}}
+                {{#if this.devoured}}
+                    <input type="text" class="form-control" placeholder=
+                    "{{this.id}}. {{this.burger_name}}" readonly>
+                {{/if}}
             {{/each}}
         </div>
     </div>
